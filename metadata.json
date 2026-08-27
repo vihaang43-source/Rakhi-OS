@@ -1,0 +1,6 @@
+{
+  "name": "Rakhi OS",
+  "description": "A ridiculously funny, highly interactive fake operating system designed as a Raksha Bandhan meme card with Didi OS 2.0.26, meme apps, absurd complaints, and zero sentimentality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

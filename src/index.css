@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --paper-bg: #F5F1E8;
+    --paper-card: #FAF7F2;
+    --paper-border: #D8CFBE;
+    --paper-dark: #2A221B;
+    --paper-accent: #8C3A27;
+    --paper-gold: #C28B38;
+  }
+
+  body {
+    background-color: #F5F1E8;
+    color: #2A221B;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-image: 
+      radial-gradient(#D5CBB9 0.75px, transparent 0.75px), 
+      radial-gradient(#E8E0D2 0.75px, #F5F1E8 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+}
+
+/* Custom scrollbars with paper aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(216, 207, 190, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 120, 100, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 120, 100, 0.7);
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Subtle paper shadow */
+.paper-shadow {
+  box-shadow: 0 10px 30px -5px rgba(42, 34, 27, 0.08), 0 4px 12px -2px rgba(42, 34, 27, 0.04), 0 0 0 1px rgba(216, 207, 190, 0.7);
+}
+
+.paper-shadow-lg {
+  box-shadow: 0 20px 40px -10px rgba(42, 34, 27, 0.14), 0 8px 16px -4px rgba(42, 34, 27, 0.06), 0 0 0 1px rgba(216, 207, 190, 0.85);
+}
+
+.paper-inner-shadow {
+  box-shadow: inset 0 2px 4px 0 rgba(42, 34, 27, 0.06);
+}
+
+/* Scanline effect for Didi Scanner */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 2.5s linear infinite;
+}
+
+/* Screen shake for easter eggs */
+@keyframes screen-shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-4px, 4px) rotate(-0.5deg); }
+  40% { transform: translate(4px, -3px) rotate(0.5deg); }
+  60% { transform: translate(-3px, -2px) rotate(-0.5deg); }
+  80% { transform: translate(3px, 2px) rotate(0.5deg); }
+}
+
+.shake-it {
+  animation: screen-shake 0.4s ease-in-out;
+}
